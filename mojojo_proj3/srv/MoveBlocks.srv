@@ -1,0 +1,4 @@
+string action
+int64 target
+---
+bool success

@@ -1,0 +1,34 @@
+message type, convert to OpenCV
+ROS node, get image
+publish to ROS topic using mesage type
+Processing Node gets image from topic
+receives image msg
+converts to OpenCV
+"goes HAM on it"
+extracts features
+shares to topic/services
+
+
+Hue: [0 180]
+Saturation: [0 255]
+Value: [0 255]
+Gimp uses H: [0 360] S: [0 100] V: [0 100] so convert appropriately if your’e sampling colors in Gimp
+
+# stick with bgr8 for incoming and outgoing images from Baxter's cameras
+# use cvtColor to convert manually
+
+# SNOOP ON IMAGES IN ROS
+rosrun image_view image_view image:=<camera topic>
+rosrun rqt_image_view rqt_image_view
+
+# Masking
+(1) define bounds in color space
+(2) create binary mask from image and color space bounds - inRange()
+(3) apply mask to original image and remove unwanted parts - bitwise_and()
+
+/camera/rgb/image_color
+
+see list of images come up
+first raw, hsv, masked, etc...
+
+end goal: put circle on ball

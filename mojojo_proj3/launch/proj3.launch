@@ -1,0 +1,15 @@
+<launch>
+
+	<!--<rosparam param="limbSide">right</rosparam>-->
+	<rosparam param="xiMag">0.10</rosparam>
+	<!--<rosparam param="numBlocks">1</rosparam>-->
+	<rosparam param="DefenceOrAttack_Mode">0</rosparam>
+	<rosparam param="MojPhase">0</rosparam>
+
+	<!--<node name="controllerMoj" pkg="mojojo_proj3" type="controller.py" output="screen" />-->
+    <node name="robot_interfaceMoj" pkg="mojojo_proj3" type="robot_interface.py" output="screen" />  
+    <node name="image_converterMoj" pkg="mojojo_proj3" type="image_converter.py" output="screen" />
+
+    <!--<include file="$find game_server)/launch/game_server.launch"/>-->
+
+</launch>

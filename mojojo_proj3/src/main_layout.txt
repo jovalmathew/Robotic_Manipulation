@@ -1,0 +1,9 @@
+# While loop general structure
+
+#track_Ball
+#Update time
+#Construct ball trajectory
+#Update variables for attack, defense based on ball location & time
+#if in attack, do something
+#if in defense, do something
+#repeat 

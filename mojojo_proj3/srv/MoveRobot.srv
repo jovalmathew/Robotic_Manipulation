@@ -1,0 +1,6 @@
+float64[] nUnit
+float64[] goal
+
+string motionType
+---
+bool success
